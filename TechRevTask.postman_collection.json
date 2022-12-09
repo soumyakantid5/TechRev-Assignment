@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "9f1f45d9-7372-49ea-a1cb-cd40c1812dbc",
+		"name": "TechRevTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19992382"
+	},
+	"item": [
+		{
+			"name": "InsertCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "soumya",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "dutta",
+							"type": "text"
+						},
+						{
+							"key": "userName",
+							"value": "soumyad5",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "soumya1234@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "9291919092",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "15/09/2000",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Soumya@1234",
+							"type": "text"
+						},
+						{
+							"key": "confirmPassword",
+							"value": "Soumya@1234",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Barrackpore",
+							"type": "text"
+						},
+						{
+							"key": "landmark",
+							"value": "Avantika",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "bhubaneshwqar",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "Orissa",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "India",
+							"type": "text"
+						},
+						{
+							"key": "zipCode",
+							"value": "600112",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Soumya/Desktop/complexity.png"
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/insertCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"insertCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelectCustomerById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customerId",
+							"value": "63938f56ffc0870deec4c18b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/selectCustomerById",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"selectCustomerById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "selectCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/selectCustomers?firstName=soumya",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"selectCustomers"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "soumya"
+						},
+						{
+							"key": "lastName",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNjM5MzhmNTZmZmMwODcwZGVlYzRjMThiIiwiaWF0IjoxNjcwNjE1NDE5LCJleHAiOjE2NzE5MTE0MTl9.FKF6pnGFFsmK_ndbkA6l9THU9Hien1D3VSPOjhk6vVs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "customerId",
+							"value": "63938f56ffc0870deec4c18b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/deleteCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21lcklkIjoiNjM5MzhmNTZmZmMwODcwZGVlYzRjMThiIiwiaWF0IjoxNjcwNjE1NDE5LCJleHAiOjE2NzE5MTE0MTl9.FKF6pnGFFsmK_ndbkA6l9THU9Hien1D3VSPOjhk6vVs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstName",
+							"value": "Soumya",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "gender",
+							"value": "Others",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "kol",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "lastName",
+							"value": "Kumar",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "rahula@gmail.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "Rahula@1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "confirmPassword",
+							"value": "Rahula@1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Soumya/Desktop/Capture1.PNG"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/updateCustomer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userName",
+							"value": "soumyad5",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "soumya",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "dutta",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Soumya@1234",
+							"type": "text"
+						},
+						{
+							"key": "confirmPassword",
+							"value": "Soumya@1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
